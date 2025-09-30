@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "NextTask (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "NextTask (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="NextTask.Views.LogInPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NextTask.Views">
+
+    <Grid x:Name="ContentArea" Margin="20,0,0,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="ms-appx:///Assets/NextTask_Logo.png"
+                   Width="320"
+                   Height="280"
+                   HorizontalAlignment="Center"
+                   Margin="50,-150,0,-80" />
+
+            <StackPanel Spacing="10">
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <TextBlock Text="User Name" Width="80" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtUserName" Width="200" PlaceholderText="Enter your user name"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <TextBlock Text="Password" Width="80" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtPassword" Width="200" PlaceholderText="Enter your password"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <Button x:Name="btnLogin" Margin="80,0,0,0" Content="Login" Width="120" Height="35" Background="MidnightBlue" Foreground="White" Click="Login_Click"/>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
