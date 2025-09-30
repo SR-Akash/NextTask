@@ -32,7 +32,7 @@ public sealed partial class LogInPage : Page
             await dialog.ShowAsync();
         }
 
-        if (string.IsNullOrEmpty(txtPassword.Text))
+        else if (string.IsNullOrEmpty(txtPassword.Text))
         {
             ContentDialog dialog = new ContentDialog()
             {
@@ -45,25 +45,32 @@ public sealed partial class LogInPage : Page
             await dialog.ShowAsync();
         }
 
-        if (txtUserName.Text == "admin" && txtPassword.Text == "1234")
+        if (!string.IsNullOrWhiteSpace(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text))
         {
-            // Get the ShellViewModel from DI container
-            var shellViewModel = App.GetService<ShellViewModel>();
-            App.MainWindow.Content = new ShellPage(shellViewModel);
-        }
-
-
-        else
-        {
-            ContentDialog dialog = new ContentDialog()
+            if (txtUserName.Text == "admin" && txtPassword.Text == "1234")
             {
-                Title = "Login Failed",
-                Content = "Invalid username or password.",
-                CloseButtonText = "OK",
-                XamlRoot = this.XamlRoot
-            };
-            _ = dialog.ShowAsync();
+                // Get the ShellViewModel from DI container
+                var shellViewModel = App.GetService<ShellViewModel>();
+                App.MainWindow.Content = new ShellPage(shellViewModel);
+            }
+            else
+            {
+                ContentDialog dialog = new ContentDialog()
+                {
+                    Title = "Login Failed",
+                    Content = "Invalid username or password.",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                _ = dialog.ShowAsync();
+            }
         }
+        
+
+    }
+
+    private void btnSignUp_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
 
     }
 }

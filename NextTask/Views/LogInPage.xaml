@@ -10,27 +10,32 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Width="1000" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Image Source="ms-appx:///Assets/NextTask_Logo.png"
-                   Width="320"
+                   Width="420"
                    Height="280"
                    HorizontalAlignment="Center"
-                   Margin="50,-150,0,-80" />
+                   Margin="0,-150,0,-80" />
 
             <StackPanel Spacing="10">
-                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-                    <TextBlock Text="User Name" Width="80" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtUserName" Width="200" PlaceholderText="Enter your user name"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-                    <TextBlock Text="Password" Width="80" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtPassword" Width="200" PlaceholderText="Enter your password"/>
-                </StackPanel>
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
 
-                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-                    <Button x:Name="btnLogin" Margin="80,0,0,0" Content="Login" Width="120" Height="35" Background="MidnightBlue" Foreground="White" Click="Login_Click"/>
-
+                    <TextBox x:Name="txtUserName" Width="250" PlaceholderText="Enter User Name" TextAlignment="Center"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox x:Name="txtPassword" Width="250" PlaceholderText="Enter Password" TextAlignment="Center"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="220" >
+                    <StackPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                        <Button x:Name="btnLogin"  Content="Login" Width="110" Height="35" Background="MediumSeaGreen" Foreground="White" Click="Login_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                        <Button x:Name="btnSignUp" Content="Sign Up" Width="110" Height="35" Background="MediumSeaGreen" Foreground="White" Click="btnSignUp_Click"/>
+                    </StackPanel>
+                </StackPanel>
+                
 
             </StackPanel>
         </StackPanel>
