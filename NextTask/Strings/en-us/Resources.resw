@@ -97,4 +97,7 @@
   <data name="Shell_LogIn.Content" xml:space="preserve">
     <value>LogIn</value>
   </data>
+  <data name="Shell_SignUp.Content" xml:space="preserve">
+    <value>SignUp</value>
+  </data>
 </root>

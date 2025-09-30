@@ -70,6 +70,8 @@ public partial class App : Application
             services.AddSingleton<IFileService, FileService>();
 
             // Views and ViewModels
+            services.AddTransient<SignUpViewModel>();
+            services.AddTransient<SignUpPage>();
             services.AddTransient<LogInViewModel>();
             services.AddTransient<LogInPage>();
             services.AddTransient<SettingsViewModel>();

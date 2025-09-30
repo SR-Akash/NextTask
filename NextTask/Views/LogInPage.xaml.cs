@@ -49,7 +49,6 @@ public sealed partial class LogInPage : Page
         {
             if (txtUserName.Text == "admin" && txtPassword.Text == "1234")
             {
-                // Get the ShellViewModel from DI container
                 var shellViewModel = App.GetService<ShellViewModel>();
                 App.MainWindow.Content = new ShellPage(shellViewModel);
             }
