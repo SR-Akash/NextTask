@@ -32,20 +32,14 @@ public class ActivationService : IActivationService
             App.MainWindow.Content = rootFrame;
         }
 
-        // Navigate to LoginPage if Frame is empty
         if (rootFrame.Content == null)
         {
             rootFrame.Navigate(typeof(LogInPage));
         }
 
-
-        // Handle activation via ActivationHandlers.
         await HandleActivationAsync(activationArgs);
 
-        // Activate the MainWindow.
         App.MainWindow.Activate();
-
-        // Execute tasks after activation.
         await StartupAsync();
     }
 

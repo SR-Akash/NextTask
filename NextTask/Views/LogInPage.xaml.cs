@@ -70,6 +70,7 @@ public sealed partial class LogInPage : Page
 
     private void btnSignUp_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
-
+        var signUpViewModel = App.GetService<SignUpViewModel>();
+        App.MainWindow.Content = new SignUpPage(signUpViewModel);
     }
 }

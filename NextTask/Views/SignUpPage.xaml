@@ -7,6 +7,34 @@
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="5" >
+            <TextBlock Text="Sign up Here"  FontSize="24" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" Margin="50,20,0,20"/>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Name" Width="120"  FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtName" Width="220"  PlaceholderText="Enter Name"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Email" Width="120"  FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtEmail" Width="220"  PlaceholderText="Enter Email"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                <TextBlock Text="Phone" Width="120"  FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPhone" Width="220"  PlaceholderText="Enter Phone"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Password" Width="120"  FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPassword" Width="220"  PlaceholderText="Enter Password"/>
+            </StackPanel>
+
+            <StackPanel Margin="120,0,0,0" Spacing="5" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button Content="Sign Up" Width="105" Height="35" Background="MediumSeaGreen" Foreground="White" Click="SignUp_Click"/>
+                <Button Content="← Back"  Width="110" Height="35" Background="DodgerBlue" Foreground="White" Click="btnBack_Click"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
